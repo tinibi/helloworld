@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sachhay.ndxd</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="shortcut icon" href="img/logo.png">
+    <link href='https://css.gg/search.css' rel='stylesheet'>
+
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <b href="">Sach Hay</b>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="">Trang chủ</a></li>
+                <li><a href="">Thể loại</a>
+                    <ul class="sub-menu">
+                        <li><a href="">Sách Thiếu Nhi</a></li>
+                        <li><a href="">Sách sinh Học</a></li>
+                        <li><a href="">Sách Tâm Lý</a></li>
+                        <li><a href="">Truyện Tranh</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Xếp hạng</a>
+                    <ul class="sub-menu">
+                        <li><a href="">Phổ Biến</a></li>
+                        <li><a href="">Yêu Thích</a></li>
+                        <li><a href="">Sách Mới</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Hỗ Trợ</a></li>
+            </ul>
+        </div>
+        <div class="others">
+            <ul>
+            <li><input placeholder="Tìm Kiếm" type="text"></li>
+        
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 10</div>
+              <img src="img/slide1.png" >
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 10</div>
+              <img src="img/slide2.png" >
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 10</div>
+              <img src="img/slide3.png" >
+            </div>
+            <div class="mySlides fade">
+              <div class="numbertext">4 / 10</div>
+              <img src="img/slide1.png" >
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">5 / 10</div>
+              <img src="img/slide2.png" >
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">6 / 10</div>
+              <img src="img/slide3.png" >
+            </div>
+            <div class="mySlides fade">
+              <div class="numbertext">7 / 10</div>
+              <img src="img/slide1.png" >
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">8 / 10</div>
+              <img src="img/slide2.png" >
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">9 / 10</div>
+              <img src="img/slide3.png" >
+            </div>
+            <div class="mySlides fade">
+              <div class="numbertext">10 / 10</div>
+              <img src="img/slide3.png" >
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+              <span class="dot" onclick="currentSlide(4)"></span> 
+              <span class="dot" onclick="currentSlide(5)"></span> 
+              <span class="dot" onclick="currentSlide(6)"></span> 
+              <span class="dot" onclick="currentSlide(7)"></span> 
+              <span class="dot" onclick="currentSlide(8)"></span> 
+              <span class="dot" onclick="currentSlide(9)"></span> 
+              <span class="dot" onclick="currentSlide(10)"></span> 
+              
+            </div>
+            
+            <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
+        </div>
+        
+        
+        <div id="table">
+            <table>
+                <tr class="image-book">
+                                 
+                    <td><img src="img/slide1.png" alt=""></td>
+                    <td><img src="img/slide6.png" alt=""></td>
+                    <td><img src="img/slide4.png" alt=""></td>      
+                    <td><img src="img/slide5.png" alt=""></td>              
+                </tr>
+                <tr class="name-book">
+                  <td><b>Chicken Cheeks</b></td>
+                  <td><b>One Piece</b></td>
+                  <td><b>Tâm Lý Học</b></td>
+                  <td><b>Dragon Ball</b></td>
+
+                </tr>
+                <tr class="money">
+                  <td><p>35.000đ</p></td>
+                  <td><p>105.000đ</p></td>
+                  <td><p>140.000đ</p></td>
+                  <td><p>39.000đ</p></td>
+
+                </tr>
+                <tr class="button">
+                  <td><button>Mua ngay</button></td>
+                  <td><button>Mua ngay</button></td>
+                  <td><button>Mua ngay</button></td>
+                  <td><button>Mua ngay</button></td>
+
+                </tr>
+            </table>
+        </div>
+        
+    </main>
+    <footer>
+        <p style="text-align:center; font-size: 50px ;">Nguyễn Dương Xuân Đỉnh-TH25.01</p>
+    </footer>
+    
+    
+    
+</body>
+</html>
